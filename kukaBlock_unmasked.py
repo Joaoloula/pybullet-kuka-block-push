@@ -7,7 +7,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pdb
 
-
 def main():
   p.connect(p.GUI)
   p.setAdditionalSearchPath(pybullet_data.getDataPath())
@@ -114,6 +113,8 @@ def main():
 
   contactForceRobotBlock[:3000] = 0
   plt.plot(contactForceRobotBlock)
+  plt.title("original experiment")
+  plt.savefig("original_experiment.png")
   plt.show()
 
 if __name__=='__main__':
